@@ -1,0 +1,47 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fnil\fcharset0 GillSans;\f1\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red26\green26\blue26;\red56\green110\blue165;}
+\margl1440\margr1440\vieww18480\viewh10700\viewkind0
+\deftab720
+\pard\pardeftab720\sa240
+
+\f0\fs32 \cf2 In this project, you will create a {\field{\*\fldinst{HYPERLINK "https://secure.wikimedia.org/wikipedia/en/wiki/Tower_defense"}}{\fldrslt \cf3 \ul \ulc3 tower defense}} game called Ants Vs. SomeBees. As the ant queen, you populate your colony with the bravest ants you can muster. Your ants must protect their queen from the evil bees that invade your territory. Irritate the bees enough by throwing leaves at them, and they will be vanquished. Fail to pester the airborne intruders adequately, and your queen will succumb to the bees' wrath. This game is inspired by PopCap Games' {\field{\*\fldinst{HYPERLINK "http://www.popcap.com/games/pvz/web"}}{\fldrslt \cf3 \ul \ulc3 Plants Vs. Zombies}} \'ae.\
+This project combines functional and object-oriented programming paradigms, focusing on the material from Chapter 2.5 of the lecture notes. The project also involves understanding, extending, and testing a large program with many related parts.\
+\
+A game of Ants Vs. SomeBees consists of a series of turns. In each turn, new bees may enter the ant colony. Then, new ants are placed. Finally, all insects (ants, then bees) take individual actions: bees sting ants, and ants throw leaves at bees. The game ends either when a bee reaches the ant queen (you lose), or the entire bee flotilla has been vanquished (you win).\
+\pard\pardeftab720\sa240
+
+\b \cf2 The Colony
+\b0 \cf2 . The colony consists of several places that are chained together. The 
+\f1\fs26 \cf2 exit
+\f0\fs32 \cf2  of each 
+\f1\fs26 \cf2 Place
+\f0\fs32 \cf2  leads to another 
+\f1\fs26 \cf2 Place
+\f0\fs32 \cf2 .\
+
+\b \cf2 Placing Ants
+\b0 \cf2 . There are two constraints that limit ant production. Placing an ant uses up some amount of the colony's food, a different amount for each type of ant. Also, only one ant can occupy each 
+\f1\fs26 \cf2 Place
+\f0\fs32 \cf2 .\
+
+\b \cf2 Bees
+\b0 \cf2 . When it is time to act, a bee either moves to the 
+\f1\fs26 \cf2 exit
+\f0\fs32 \cf2  of its current 
+\f1\fs26 \cf2 Place
+\f0\fs32 \cf2  if no ant blocks its path, or stings an ant that blocks its path.\
+
+\b \cf2 Ants
+\b0 \cf2 . Each type of ant takes a different action and requires a different amount of food to place. The two most basic ant types are the 
+\f1\fs26 \cf2 HarvesterAnt
+\f0\fs32 \cf2 , which adds one food to the colony during each turn, and the 
+\f1\fs26 \cf2 ThrowerAnt
+\f0\fs32 \cf2 , which throws a leaf at a bee each turn.\
+\
+Most concepts in the game have a corresponding class that encapsulates the logic for that concept. For instance, a 
+\f1\fs26 \cf2 Place
+\f0\fs32 \cf2  in the colony holds insects and connects to other places. A 
+\f1\fs26 \cf2 Bee
+\f0\fs32 \cf2  stings ants and advances through exits.\
+The game can be run in two modes: as a text-based game or using a graphical user interface (GUI). The game logic is the same in either case, but the GUI enforces a turn time limit that makes playing the game more exciting. The text-based interface is provided for debugging and development.}
